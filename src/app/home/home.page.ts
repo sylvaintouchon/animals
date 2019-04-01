@@ -8,8 +8,10 @@ import { TodoService } from '../services/todo.service';
 })
 export class HomePage {
 
+  private todoList;
+
   constructor(private todoService: TodoService){
-    console.log(todoService.getData());
+    this.todoList = todoService.getData();
   }
 
 }
